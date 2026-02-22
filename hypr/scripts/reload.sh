@@ -1,5 +1,4 @@
 pkill waybar
-pkill hyprlauncher
 pkill hyprpaper
 
 hyprctl dispatch exec waybar

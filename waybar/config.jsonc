@@ -1,21 +1,26 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-	"margin": "5px 5px 2px 5px",
+    "height": "auto",
+	"margin": "4",
     "modules-left": [
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
+		"hyprland/window",
     ],
     "modules-right": [
         "pulseaudio",
         "network",
         "battery",
-        "tray"
+        "tray",
+        "clock"
     ],
-    // Modules configuration
+	"hyprland/window": {
+		"format": "{title}",
+		"icon": true,
+		"icon-size": 18,
+	},
 	"hyprland/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": true,
@@ -28,6 +33,7 @@
 		}
 	},
     "tray": {
+		"icon-size": 18,
         "spacing": 10
     },
     "clock": {
@@ -49,16 +55,15 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "󰛳",
         "format-disconnected": "󰲛",
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": " {format_source}",
+        "format": "{icon}",
+        "format-muted": "{format_source}",
         "format-icons": {
-            "default": [" ", " ", "  "]
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
     }
