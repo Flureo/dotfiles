@@ -1,59 +1,53 @@
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-}
+    font-size: 14px;
 
-window#waybar {
     background-color: transparent;
 }
 
-#window,
-#workspaces,
-#clock,
 #battery,
 #network,
 #pulseaudio,
+#window,
+#workspaces,
+#clock,
 #tray,
 
 #default {
-	margin: 0 4px;
-    padding: 0 12px;
-	background-color: #000000;
-    color: #ffffff;
+	color: #c0caf5;
+	background-color: #1a1b26;
+	padding: 0px 10px;
 
-	border-radius: 100;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #4f4f5f;
+	border-radius: 10px;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
+.modules-right {
+	color: #c0caf5;
+	background-color: #1a1b26;
+	padding: 0px;
+
+	border-radius: 10px;
 }
 
-button:hover {
-    background: inherit;
+window#waybar {
 }
 
-#pulseaudio:hover {
-}
-
-#workspaces button {
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-}
-
-#workspaces button.focused {
-}
-
-#workspaces button.urgent {
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
 #workspaces {
-	padding: 0;
+	padding: 0px;
+}
+
+#workspaces button {
+	border-radius: 10px;
+	padding-left: 8px;
+	padding-right: 12px;
+}
+
+#workspaces button.active {
+	color: #7aa2f7;
 }
 
 #clock {
@@ -62,53 +56,22 @@ button:hover {
 #battery {
 }
 
-#battery.charging, #battery.plugged {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
 #network {
-	padding: 0 12px;
-	padding-right: 16px;
 }
 
-#network.disconnected {
+#network:hover {
+	background-color: #292e42;
 }
 
 #pulseaudio {
 }
 
-#pulseaudio.muted {
+#pulseaudio:hover {
+	background-color: #292e42;
 }
 
 #tray {
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+#mpd {
 }
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-

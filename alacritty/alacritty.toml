@@ -1,12 +1,12 @@
 [general]
 import = [
-	"~/.config/alacritty/colorschemes/main.toml"
+	"~/.config/alacritty/colorschemes/tokyonight_night.toml"
 ]
 
 [window]
 title = "Terminal"
 blur = false
-opacity = 0.75
+opacity = 1
 dimensions = { columns = 100, lines = 24 }
 
 [font]

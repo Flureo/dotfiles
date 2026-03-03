@@ -29,6 +29,16 @@ cyn='\[\033[01;36m\]'   # Cyan
 wht='\[\033[01;37m\]'   # White
 clr='\[\033[00m\]'      # Reset
 
-PS1='[\W] » '
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+	start-hyprland
+fi
 
-# PS1='┌─[\u@\H \w]\n└─\$: » '
+pokemon-colorscripts -r 1 --no-title | fastfetch --file-raw -
+
+function git_branch() {
+    if [ -d .git ] ; then
+		echo "($(git branch 2> /dev/null | awk '/\*/{print $2}'))"
+    fi
+}
+
+PS1="${grn}\u${wht}@${blu}\h ${ylw}\w ${pur}\$(git_branch)\n${clr}> "

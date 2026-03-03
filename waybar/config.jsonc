@@ -1,47 +1,41 @@
 {
-    "layer": "top",
     "position": "top",
-    "height": "auto",
-	"margin": "4",
+    "height": 30,
+	"margin": "4px",
     "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-		"hyprland/window",
-    ],
-    "modules-right": [
-        "pulseaudio",
-        "network",
-        "battery",
-        "tray",
         "clock"
     ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray"
+    ],
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"active": ""
+		},
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
 	"hyprland/window": {
 		"format": "{title}",
 		"icon": true,
-		"icon-size": 18,
-	},
-	"hyprland/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": true,
-		"warp-on-scroll": false,
-		"format": "{name}",
-		"format-icons": {
-			"urgent": "",
-			"focused": "",
-			"default": ""
-		}
+		"icon-size": 16
 	},
     "tray": {
-		"icon-size": 18,
-        "spacing": 10
+        "spacing": 20
     },
     "clock": {
-
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -50,18 +44,18 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "format-wifi": "",
-        "format-ethernet": "󰛳",
-        "format-disconnected": "󰲛",
+        "format-ethernet": "",
+        "format-disconnected": "⚠"
     },
     "pulseaudio": {
         "format": "{icon}",
-        "format-muted": "{format_source}",
+        "format-muted": " ",
+        "format-source": "",
+        "format-source-muted": "",
         "format-icons": {
             "default": [" ", " ", " "]
         },
